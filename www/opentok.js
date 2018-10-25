@@ -200,7 +200,7 @@ replaceWithVideoStream = function(element, streamId, properties) {
       newElement.style.height = properties.height + "px";
     }
     if (properties.style.backgroundImageURI) {
-      newElement.style.backgroundImage = "url('" + properties.style.backgroundImageURI + "')";
+      newElement.style.backgroundImage = "url(" + properties.style.backgroundImageURI + ")";
     }
     newElement.style.overflow = "hidden";
     newElement.style['background-color'] = "#000000";
