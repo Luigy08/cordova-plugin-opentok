@@ -199,7 +199,7 @@ replaceWithVideoStream = function(element, streamId, properties) {
     } else {
       newElement.style.height = properties.height + "px";
     }
-    if (properties.style.backgroundImageURI) {
+    if (properties.style && properties.style.backgroundImageURI) {
       newElement.style.backgroundImage = "url(" + properties.style.backgroundImageURI + ")";
     }
     newElement.style.overflow = "hidden";
@@ -214,6 +214,7 @@ replaceWithVideoStream = function(element, streamId, properties) {
     videoElement = document.createElement("video");
     videoElement.style.width = "100%";
     videoElement.style.height = "100%";
+    videoElement.setAttribute("playsinline", true);
     internalDiv.appendChild(videoElement);
     newElement.appendChild(internalDiv);
     if (properties.insertMode === "append") {
