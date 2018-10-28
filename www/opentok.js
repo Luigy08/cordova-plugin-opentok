@@ -535,10 +535,10 @@ TBPublisher = (function() {
       if ((this.properties.audioFallbackEnabled != null) && this.properties.audioFallbackEnabled === false) {
         audioFallbackEnabled = "false";
       }
-      if ((this.properties.audioSource != null) || this.properties.audioSource === false) {
+      if ((this.properties.audioSource === null) || this.properties.audioSource === false) {
         audioSource = "false";
       }
-      if ((this.properties.videoSource != null) || this.properties.videoSource === false) {
+      if ((this.properties.videoSource === null) || this.properties.videoSource === false) {
         videoSource = "false";
       }
       insertMode = (_ref10 = this.properties.insertMode) != null ? _ref10 : insertMode;
